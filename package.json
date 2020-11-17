@@ -1,27 +1,27 @@
 {
   "name": "artillery-plugin-cloudwatch",
-  "version": "0.0.3",
-  "description": "A plugin for artillery.io that records response data into cloudwatch.  See https://github.com/shoreditch-ops/artillery.  Also see http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html.",
+  "version": "0.1.0",
+  "description": "A plugin for artillery.io that records response data into CloudWatch.",
   "main": "index.js",
   "scripts": {
     "eslint": "./node_modules/.bin/eslint .",
     "jshint": "./node_modules/.bin/jshint --exclude node_modules .",
     "unit": "./node_modules/.bin/mocha -r aws-sdk --recursive -R min tests",
-    "test": "npm run unit && npm run jscs && npm run jshint",
+    "test": "npm run unit && npm run eslint && npm run jshint",
     "publish": "./node_modules/.bin/np",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nordstrom/artillery-plugin-cloudwatch.git"
+    "url": "git+https://github.com/luneo7/artillery-plugin-cloudwatch.git"
   },
   "keywords": [
     "artillery",
     "cloudwatch",
     "plugin"
   ],
-  "author": "Erik Erikson <erik.m.erikson@nordstrom.com>, Greg Smith <greg.w.smith@nordstrom.com>",
+  "author": "Lucas Ferreira <luneo7@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/nordstrom/artillery-plugin-cloudwatch/issues"
@@ -34,11 +34,16 @@
     "snyk": "^1.316.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "jscs": "^3.0.5",
-    "jshint": "^2.9.2",
-    "mocha": "^2.5.3",
-    "np": "^2.16.0"
+    "aws-sdk": "^2.686.0",
+    "chai": "^4.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-json": "^1.4.0",
+    "mocha": "^7.2.0",
+    "mochawesome": "^6.1.1",
+    "np": "^2.16.0",
+    "jshint": "^2.9.2"
   },
   "snyk": true
 }

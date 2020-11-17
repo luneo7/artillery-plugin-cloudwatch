@@ -7,11 +7,12 @@
     "node": true,
     "quotmark": "single",
     "smarttabs": true,
-    "strict": true,
+    "strict": false,
     "trailing": true,
     "undef": true,
     "unused": false,
     "mocha": true,
+    "esversion": 6,
     "globals": {
         "define": true,
         "describe": true,
