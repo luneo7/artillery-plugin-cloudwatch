@@ -8,9 +8,8 @@
     "jshint": "./node_modules/.bin/jshint --exclude node_modules .",
     "unit": "./node_modules/.bin/mocha -r aws-sdk --recursive -R min tests",
     "test": "npm run unit && npm run eslint && npm run jshint",
-    "publish": "./node_modules/.bin/np",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -42,7 +41,6 @@
     "eslint-plugin-json": "^1.4.0",
     "mocha": "^7.2.0",
     "mochawesome": "^6.1.1",
-    "np": "^2.16.0",
     "jshint": "^2.9.2"
   },
   "snyk": true
